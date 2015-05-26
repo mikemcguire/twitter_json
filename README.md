@@ -12,7 +12,8 @@ Getting Started
 - Choose endpoint e.g.(user_timeline, retweets)
 - Choose the fields you want to send with the request (example: `?screen_name=iamcodewizard`)
 
-== Installation ==
+Installation
+------------
 
 1. Upload 'advanced-custom-fields' to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
