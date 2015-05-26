@@ -39,4 +39,4 @@ This plugin is a work in progress and only supports small amount of the Twitter 
 Example:( "/twitter_json/statuses/user_timeline/?screen_name=iamcodewizard" )
 
 ## Special Thanks
-This plugin uses [Twitter API PHP])(https://github.com/J7mbo/twitter-api-php/) to do all the interfacing with Twitter and merely provides a wrapper that can be used inside of a JAVASCRIPT application.
+This plugin uses [Twitter API PHP](https://github.com/J7mbo/twitter-api-php/) to do all the interfacing with Twitter and merely provides a wrapper that can be used inside of a JAVASCRIPT application.
