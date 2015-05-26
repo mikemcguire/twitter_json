@@ -35,4 +35,5 @@ This plugin is a work in progress and only supports small amount of the Twitter 
 
 ## Creating URL to access data
 ```var url = "/twitter_json/" + collection +"/"+ endpoint +"/"+parameters"```
+
 Example:( "/twitter_json/statuses/user_timeline/?screen_name=iamcodewizard" )
