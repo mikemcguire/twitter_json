@@ -6,7 +6,7 @@ This provides endpoints for only GET/READ requests.
 ##Installation
 
 
-1. Upload 'advanced-custom-fields' to the '/wp-content/plugins/' directory
+1. Upload 'twitter_json' to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Click on the new menu item inside of tools "Twitter JSON"
 4. Add you're application credentials
