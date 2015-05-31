@@ -8,17 +8,17 @@ class Tweets_JSON_Responder {
 
 	public function __construct() {
 		$this->settings = array(
-		    'oauth_access_token' => get_option( "twitter_json_access_token", null ),
-		    'oauth_access_token_secret' => get_option( "twitter_json_token_secret", null ),
-		    'consumer_key' => get_option( "twitter_json_consumer_key", null ),
-		    'consumer_secret' => get_option( "twitter_json_consumer_secret", null )
+		    'oauth_access_token' => htmlentities( get_option( "twitter_json_oauth_access_token", null ), ENT_QUOTES, "UTF-8"),
+		    'oauth_access_token_secret' => htmlentities( get_option( "twitter_json_oauth_access_token_secret", null ), ENT_QUOTES, "UTF-8"),
+		    'consumer_key' => htmlentities( get_option( "twitter_json_consumer_key", null ), ENT_QUOTES, "UTF-8"),
+		    'consumer_secret' => htmlentities( get_option( "twitter_json_consumer_secret", null ), ENT_QUOTES, "UTF-8")
 		);
 	}
 
 	/**
 	 * Parses path, retrieves results and then exits the JSON
 	 * @param  string $path 
-	 * @return exit
+	 * @return exit json
 	 */
 	public function serve_request($path = null){
 		$error = null;
@@ -44,7 +44,7 @@ class Tweets_JSON_Responder {
 		if( isset($path[1]) && in_array($path[1], $collection_endpoints, true) ):
 			$collection = $path[1];
 		else:
-			$error = isset($error) ? $error : "Twitter JSON Error: Invalid Collection: '".htmlspecialchars($path[1])."'";
+			$error = isset($error) ? $error : "Twitter JSON Error: Invalid Collection: '".htmlentities($path[1])."'";
 		endif;
 
 		//Set Endpoint
@@ -56,7 +56,7 @@ class Tweets_JSON_Responder {
 		if( isset($path[2]) && in_array($path[2], $statuses_endpoints, true) ):
 			$endpoint = $path[2].".json";
 		else:
-			$error = isset($error) ? $error : "Twitter JSON Error: Invalid Endpoint: '".htmlspecialchars($path[2])."'";
+			$error = isset($error) ? $error : "Twitter JSON Error: Invalid Endpoint: '".htmlentities($path[2])."'";
 		endif;
 
 
@@ -90,7 +90,7 @@ class Tweets_JSON_Responder {
 	/**
 	 * Exits 404 error and spits out json response
 	 * @param string $error 
-	 * @return exit
+	 * @return exit json 404
 	 */
 	private function handle_error($error){
 		header('HTTP/1.0 400 Bad error');
