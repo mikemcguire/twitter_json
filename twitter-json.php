@@ -1,6 +1,6 @@
 <?php defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 /*
-Plugin Name: Twittr JSON
+Plugin Name: Twitter JSON
 Plugin URI:  https://github.com/mikemcguire/twitter_json
 Description: Twitter JSON provides a basic interface for retrieving tweets with a semi-RESTFUL API.
 Version:     0.0.1
